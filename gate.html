@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Menphis Access Gate</title>
+</head>
+<body style="background:black;color:#00ffcc;font-family:monospace;text-align:center;margin-top:20vh">
+
+<script>
+  const TOKEN = "MENPHIS-PATCH-2026";
+
+  const params = new URLSearchParams(window.location.search);
+  const token = params.get("token");
+
+  if (token === TOKEN) {
+    // Access granted
+    window.location.replace("https://yourwebsite.com/main.html");
+  } else {
+    // Access denied
+    document.body.innerHTML = `
+      <h1>ACCESS DENIED</h1>
+      <p>Error: NAN-403</p>
+      <p>Patch not detected.</p>
+    `;
+  }
+</script>
+
+</body>
+</html>

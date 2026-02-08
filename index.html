@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bluey Fun Zone</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="assets/images/Bluey_logo-1.svg" type="image/svg+xml">
+</head>
+<body>
+<header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="assets/images/bluey-trademark-blue-white.svg" alt="Bluey Logo">
+        </a>
+    </div>
+    <nav>
+        <a href="#hero">Home</a>
+        <a href="#games">Games</a>
+        <a href="#videos">Videos</a>
+        <a href="#about">About</a>
+    </nav>
+    <button id="darkToggle">🌕☀️</button>
+</header>
+<!-- Hero Section -->
+<section id="hero">
+    <h1>Welcome to the Bluey Fun Zone!</h1>
+    <p>Play games, watch fun videos, and explore!</p>
+    <button onclick="scrollToSection('games')">Play Now</button>
+</section>
+<!-- Games Section -->
+<section id="games">
+    <h2>🎮 Games</h2>
+    <div class="card-list">
+        <div class="card" id="keepyCard">
+            <h3>Keepy Uppy</h3>
+            <p>Coming soon!</p>
+        </div>
+        <div class="card">
+            <h3>Magic Xylophone</h3>
+            <p>Coming soon!</p>
+        </div>
+        <div class="card">
+            <h3>Shadowlands</h3>
+            <p>Coming soon!</p>
+        </div>
+</section>
+<!-- Videos Section -->
+<section id="videos">
+    <h2>🎥 Videos</h2>
+    <div class="card-list">
+        <div class="card"><h3>Bluey Season 1</h3></div>
+        <div class="card"><h3>Bluey Season 2</h3></div>
+        <div class="card"><h3>Bluey season 3</h3></div>
+    </div>
+</section>
+<!-- About Section -->
+<section id="about">
+    <h2>About</h2>
+    <p>This is a fun fan site for kids who love Bluey!</p>
+</section>
+<footer>
+    <p>Made with 💙 for Bluey fans</p>
+</footer>
+<script src="js/main.js"></script>
+<script>
+    // -------------------------------
+    // Keepy Uppy Launcher
+    // -------------------------------
+    const keepyCard = document.getElementById("keepyCard");
+    const keepyContainer = document.getElementById("keepyGameContainer");
+    const closeKeepy = document.getElementById("closeKeepy");
+    keepyCard.onclick = () => {
+        keepyContainer.style.display = "block";
+        keepyContainer.scrollIntoView({ behavior: "smooth" });
+    };
+    closeKeepy.onclick = () => {
+        keepyContainer.style.display = "none";
+    };
+</script>
+</body>
+</html>
